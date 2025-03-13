@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>包剪揼 - 你必輸版 😂</title>
+    <title>與 Kieran 猜包剪揼</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
-        img { width: 100px; height: 100px; margin: 10px; }
     </style>
 </head>
 <body>
-    <h1>包剪揼 - 你必輸版 😂</h1>
+    <h1>與 Kieran 猜包剪揼 🤖</h1>
     <p>選擇你的手勢：</p>
     <button id="rock">✊ 包</button>
-    <button id="paper">✋ 剪</button>
-    <button id="scissors">✌️ 揼</button>
+    <button id="paper">✋ 揼</button>
+    <button id="scissors">✌️ 剪</button>
     
     <h2>結果</h2>
     <p id="result">請選擇你的手勢</p>
-    <img id="player-img" src="" alt="你的選擇">
-    <img id="computer-img" src="" alt="電腦的選擇">
     
     <script>
         document.getElementById("rock").addEventListener("click", function() { playGame('rock'); });
@@ -28,15 +25,12 @@
 
         function playGame(playerChoice) {
             const winningMoves = {"rock": "paper", "paper": "scissors", "scissors": "rock"};
-            let computerChoice = winningMoves[playerChoice]; // 電腦一定贏
+            let computerChoice = winningMoves[playerChoice]; // Kieran 一定贏
 
             // 更新網頁內容
-            document.getElementById("result").innerText = `你出: ${playerChoice}  電腦出: ${computerChoice}\n電腦勝出！你輸了！😂`;
-            
-            // 使用臨時圖片以防止找不到圖片導致錯誤
-            document.getElementById("player-img").src = `https://via.placeholder.com/100?text=${playerChoice}`;
-            document.getElementById("computer-img").src = `https://via.placeholder.com/100?text=${computerChoice}`;
+            document.getElementById("result").innerText = `你出: ${playerChoice}  Kieran 出: ${computerChoice}\nKieran 勝出！你輸了！😂`;
         }
     </script>
 </body>
 </html>
+
